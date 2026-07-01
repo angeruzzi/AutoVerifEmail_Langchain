@@ -88,9 +88,7 @@ def main() -> None:
         misfire_grace_time=300, # até 5 min de tolerância se o processo estiver ocupado
     )
 
-    next_run = scheduler.get_job("email_agent").next_run_time
     logger.info("Agendamento ativo: '%s' (%s)", cron_expr, timezone)
-    logger.info("Próxima execução: %s", next_run)
     logger.info("Pressione Ctrl+C para encerrar")
 
     try:
