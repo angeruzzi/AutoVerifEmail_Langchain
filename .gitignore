@@ -1,0 +1,31 @@
+# Ambiente virtual
+.venv/
+
+# Variáveis de ambiente e segredos
+.env
+credentials.json
+token.json
+
+# Estado de execução
+last_run.json
+
+# Logs
+agent.log
+*.log
+
+# Documentação interna
+docs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# uv
+uv.lock
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
