@@ -204,34 +204,38 @@ docker compose up -d
 
 ```bash
 # Linux/macOS
-.venv/bin/python check_env.py
+source .venv/bin/activate
+python check_env.py
 
-# Windows
-.venv\Scripts\python.exe check_env.py
+# Windows (PowerShell)
+.\.venv\Scripts\Activate.ps1
+python check_env.py
 ```
 
 ---
 
 ## Executando o agente
 
-### Execução imediata (manual)
+Ative o ambiente virtual antes de executar (necessário apenas uma vez por sessão de terminal):
 
 ```bash
 # Linux/macOS
-.venv/bin/python main.py --run-now
+source .venv/bin/activate
 
-# Windows
-.venv\Scripts\python.exe main.py --run-now
+# Windows (PowerShell)
+.\.venv\Scripts\Activate.ps1
+```
+
+### Execução imediata (manual)
+
+```bash
+python main.py --run-now
 ```
 
 ### Agendamento automático
 
 ```bash
-# Linux/macOS
-.venv/bin/python main.py
-
-# Windows
-.venv\Scripts\python.exe main.py
+python main.py
 ```
 
 O processo fica em execução contínua e dispara conforme o `SCHEDULE_CRON` configurado no `.env`.
